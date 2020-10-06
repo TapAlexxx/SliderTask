@@ -491,7 +491,7 @@ RectTransform:
   m_Children:
   - {fileID: 1732489521}
   m_Father: {fileID: 1674375490}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.20252272}
   m_AnchorMax: {x: 0.39625, y: 0.34300002}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087732783}
+      - m_Target: {fileID: 1870621322}
         m_MethodName: AddHealthPoints
         m_Mode: 4
         m_Arguments:
@@ -693,9 +693,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1870621319}
   - {fileID: 1650105152}
   - {fileID: 1707001634}
-  - {fileID: 2087732781}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -737,7 +737,7 @@ RectTransform:
   m_Children:
   - {fileID: 870911085}
   m_Father: {fileID: 1674375490}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.60375, y: 0.20252272}
   m_AnchorMax: {x: 0.85, y: 0.33947733}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087732783}
+      - m_Target: {fileID: 1870621322}
         m_MethodName: TakeDamage
         m_Mode: 4
         m_Arguments:
@@ -931,6 +931,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732489520}
   m_CullTransparentMesh: 0
+--- !u!1 &1870621318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870621319}
+  - component: {fileID: 1870621321}
+  - component: {fileID: 1870621320}
+  - component: {fileID: 1870621322}
+  - component: {fileID: 1870621323}
+  m_Layer: 5
+  m_Name: Hero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1870621319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870621318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2087732781}
+  m_Father: {fileID: 1674375490}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -350, y: -255.27765}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1870621320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870621318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1870621321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870621318}
+  m_CullTransparentMesh: 0
+--- !u!114 &1870621322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870621318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95a819b2a910cd4c9775edf1118f873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heroMaxHP: 100
+  _speed: 10
+--- !u!114 &1870621323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870621318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95a819b2a910cd4c9775edf1118f873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heroMaxHP: 100
+  _speed: 10
 --- !u!1 &1957552639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,10 +1230,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2087732781}
   - component: {fileID: 2087732784}
-  - component: {fileID: 2087732783}
   - component: {fileID: 2087732782}
+  - component: {fileID: 2087732783}
   m_Layer: 5
-  m_Name: Hero
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,20 +1246,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087732780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2051353474}
   - {fileID: 1957552640}
   - {fileID: 961197921}
-  m_Father: {fileID: 1674375490}
-  m_RootOrder: 2
+  m_Father: {fileID: 1870621319}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20750001, y: 0.5451136}
   m_AnchorMax: {x: 0.7925, y: 0.57352275}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1.8731995, y: 0}
+  m_AnchoredPosition: {x: 350, y: 333.70944}
+  m_SizeDelta: {x: 411.3732, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087732782
 MonoBehaviour:
@@ -1179,12 +1284,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2087732780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95a819b2a910cd4c9775edf1118f873, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e0744b00592b2041adad8033550b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heroMaxHP: 100
-  _speed: 20
   _hpBar: {fileID: 2087732784}
+  _hero: {fileID: 1870621322}
 --- !u!114 &2087732784
 MonoBehaviour:
   m_ObjectHideFlags: 0

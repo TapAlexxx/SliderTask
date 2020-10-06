@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour
 {
     [SerializeField] private float _heroMaxHP;
     [SerializeField] private float _speed;
-    [SerializeField] private Slider _hpBar;
+
+    public float NormalizedHeroHP { get; private set; }
     
     private float _currentHeroHP;
     private float _targetHeroHP;
@@ -16,7 +18,7 @@ public class Hero : MonoBehaviour
     {
         _currentHeroHP = _heroMaxHP;
         _targetHeroHP = _heroMaxHP;
-        _hpBar.value = _currentHeroHP / _heroMaxHP;
+        NormalizedHeroHP = _currentHeroHP / _heroMaxHP;
     }
     private void Update()
     {
@@ -28,7 +30,7 @@ public class Hero : MonoBehaviour
         {
             _currentHeroHP -= Time.deltaTime * _speed;
         }
-        _hpBar.value = _currentHeroHP / _heroMaxHP;
+        NormalizedHeroHP = _currentHeroHP / _heroMaxHP;
     }
 
     public void TakeDamage(float damage)
