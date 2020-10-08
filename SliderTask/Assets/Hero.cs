@@ -8,6 +8,7 @@ public class Hero : MonoBehaviour
 {
     [SerializeField] private float _heroMaxHP;
     [SerializeField] private float _speed;
+    [SerializeField] private UnityEvent _hpChanged;
 
     public float NormalizedHeroHP { get; private set; }
     
@@ -19,18 +20,16 @@ public class Hero : MonoBehaviour
         _currentHeroHP = _heroMaxHP;
         _targetHeroHP = _heroMaxHP;
         NormalizedHeroHP = _currentHeroHP / _heroMaxHP;
+        _hpChanged.Invoke();
     }
     private void Update()
     {
-        if (_targetHeroHP >= _currentHeroHP)
+        if (_currentHeroHP != _targetHeroHP)
         {
-            _currentHeroHP += Time.deltaTime * _speed;
+            _currentHeroHP = Mathf.Lerp(_currentHeroHP, _targetHeroHP, _speed * Time.deltaTime);
+            NormalizedHeroHP = _currentHeroHP / _heroMaxHP;
+            _hpChanged.Invoke();
         }
-        else if (_targetHeroHP <= _currentHeroHP)
-        {
-            _currentHeroHP -= Time.deltaTime * _speed;
-        }
-        NormalizedHeroHP = _currentHeroHP / _heroMaxHP;
     }
 
     public void TakeDamage(float damage)

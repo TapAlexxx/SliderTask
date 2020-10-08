@@ -555,7 +555,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1870621322}
+      - m_Target: {fileID: 1870621323}
         m_MethodName: AddHealthPoints
         m_Mode: 4
         m_Arguments:
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1870621322}
+      - m_Target: {fileID: 1870621323}
         m_MethodName: TakeDamage
         m_Mode: 4
         m_Arguments:
@@ -942,9 +942,8 @@ GameObject:
   - component: {fileID: 1870621319}
   - component: {fileID: 1870621321}
   - component: {fileID: 1870621320}
-  - component: {fileID: 1870621322}
-  - component: {fileID: 1870621323}
   - component: {fileID: 1870621324}
+  - component: {fileID: 1870621323}
   m_Layer: 5
   m_Name: Hero
   m_TagString: Untagged
@@ -1009,20 +1008,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870621318}
   m_CullTransparentMesh: 0
---- !u!114 &1870621322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870621318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95a819b2a910cd4c9775edf1118f873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _heroMaxHP: 100
-  _speed: 10
 --- !u!114 &1870621323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1021,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heroMaxHP: 100
-  _speed: 10
+  _speed: 3
+  _hpChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2087732783}
+        m_MethodName: UpdateHpBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1870621324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 2087732784}
-  _hero: {fileID: 1870621322}
+  _hero: {fileID: 1870621323}
 --- !u!114 &2087732784
 MonoBehaviour:
   m_ObjectHideFlags: 0
